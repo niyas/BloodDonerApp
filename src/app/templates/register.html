@@ -1,0 +1,56 @@
+﻿<form style="width:30%;margin-left:1%;" #registerForm="ngForm" (ngSubmit)="createDoner(registerForm.value)">
+    <div class="form-group">
+      <label for="FirstName">FirstName</label>
+      <input class="form-control" name="FirstName" [ngModel]="doner.FirstName" />
+    </div>
+    <div class="form-group">
+      <label for="LastName">LastName</label>
+      <input class="form-control" name="LastName" [ngModel]="doner.LastName" />
+    </div>
+    <div class="form-group">
+      <label for="Age">Age</label>
+      <input class="form-control" name="Age" [ngModel]="doner.Age" />
+    </div>
+    <div class="form-group">
+      <label for="Gender">Gender</label>
+      <input class="form-control" name="Gender" [ngModel]="doner.Gender" />
+    </div>
+    <div class="form-group">
+      <label for="Weight">Weight</label>
+      <input class="form-control" name="Weight" [ngModel]="doner.Weight" />
+    </div>
+    <div class="form-group">
+      <label for="BloodGroup">BloodGroup</label>
+      <input class="form-control" name="BloodGroup" [ngModel]="doner.BloodGroup" />
+    </div>
+    <div class="form-group">
+      <label for="DateOfBirth">DateOfBirth</label>
+      <my-date-picker name="DateOfBirth" [options]="myDatePickerOptions" #DateOfBirth="ngModel" required [(ngModel)]="doner.DateOfBirth"></my-date-picker>
+    </div>
+    <div class="form-group">
+      <label for="Address">Address</label>
+      <textarea class="form-control" name="Address" [ngModel]="doner.Address1"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="City">City</label>
+      <input class="form-control" name="City" [ngModel]="doner.City" />
+    </div>
+    <div class="form-group">
+      <label for="State">State</label>
+      <input class="form-control" name="State" [ngModel]="doner.State" />
+    </div>
+    <div class="form-group">
+      <label for="Mobile">Mobile</label>
+      <input class="form-control" name="Mobile" [ngModel]="doner.Mobile" />
+    </div>
+    <div class="form-group">
+      <label for="PreferredLocation">PreferredLocation</label>
+      <input class="form-control" name="PreferredLocation" [ngModel]="doner.PreferredLocation" />
+    </div>
+    <div class="form-group">
+      <label for="DateOfBirth">Last Donated on</label>
+      <my-date-picker name="LastDonatedDate" [options]="myDatePickerOptions" #LastDonatedDate="ngModel" [(ngModel)]="doner.LastDonatedDate"></my-date-picker>
+    </div>
+    <button type="submit" class="btn btn-primary" >Register</button>
+  </form>
+  
